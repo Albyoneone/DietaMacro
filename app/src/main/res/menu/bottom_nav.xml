@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/home"
+        android:icon="@drawable/baseline_home_24"
+        />
+    <item
+        android:id="@+id/informazioni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/informazioni"
+        android:icon="@drawable/baseline_person_24"
+        />
+    <item
+        android:id="@+id/cibi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/cibi"
+        android:icon="@drawable/baseline_dinner_dining_24"
+        />
+</menu>
