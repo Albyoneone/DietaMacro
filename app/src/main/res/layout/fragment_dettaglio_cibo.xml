@@ -3,49 +3,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DettaglioCibo"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/testoDettaglio"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Testo dettaglio"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Dettagli"
         />
 
-    <TextView
-        android:id="@+id/testoDettaglioCarboidrati"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Carboidrati"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/testoDettaglioProteine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Proteine"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        />
+        <TextView
+            android:id="@+id/testoDettaglio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:text="Testo dettaglio"
+            android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/testoDettaglioGrassi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Grassi"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        />
+        <TextView
+            android:id="@+id/testoDettaglioCarboidrati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:text="Carboidrati"
+            android:textSize="40sp" />
 
+        <TextView
+            android:id="@+id/testoDettaglioProteine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:text="Proteine"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/testoDettaglioGrassi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:text="Grassi"
+            android:textSize="40sp" />
+
+    </LinearLayout>
 
 </LinearLayout>
