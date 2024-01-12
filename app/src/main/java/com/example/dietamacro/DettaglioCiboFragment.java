@@ -11,16 +11,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class DettaglioCibo extends Fragment {
+public class DettaglioCiboFragment extends Fragment {
 
-    public DettaglioCibo() {
+    public DettaglioCiboFragment() {
         // Required empty public constructor
     }
 
-    public static DettaglioCibo newInstance() {
+    public static DettaglioCiboFragment newInstance() {
 
-        return new DettaglioCibo();
+        return new DettaglioCiboFragment();
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
