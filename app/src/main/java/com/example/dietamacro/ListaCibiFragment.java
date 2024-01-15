@@ -15,12 +15,10 @@ import android.widget.ListView;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
-import java.util.AbstractCollection;
 import java.util.ArrayList;
 
-public class ListaCibiFragment extends Fragment {
 
-    private AbstractCollection<Cibo> adapter;
+public class ListaCibiFragment extends Fragment {
 
     public ListaCibiFragment() {
         // Required empty public constructor
@@ -65,7 +63,7 @@ public class ListaCibiFragment extends Fragment {
                         Log.w("mioFirestore", "Error getting documents.", task.getException());
                     }
                 });
-    };
+    }
 
     private void setupAdapter(View view) {
         ListView lista = view.findViewById(R.id.listaCibo);
@@ -84,6 +82,7 @@ public class ListaCibiFragment extends Fragment {
             args.putString("carboidrati", String.valueOf(adapterNome.get(i).getCarboidrati()));
             args.putString("proteine", String.valueOf(adapterNome.get(i).getProteine()));
             args.putString("grassi", String.valueOf(adapterNome.get(i).getGrassi()));
+            args.putString("id", String.valueOf(adapterNome.get(i).getId()));
             dettaglioFragment.setArguments(args);
 
             requireActivity().getSupportFragmentManager().beginTransaction()
@@ -103,6 +102,6 @@ public class ListaCibiFragment extends Fragment {
                     .replace(R.id.frame_layout, aggiungiDatiFragment)
                     .addToBackStack(null)
                     .commit();
-        });    };
-
+        });
+    }
 }
