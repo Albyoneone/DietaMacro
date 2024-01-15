@@ -29,7 +29,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="20sp"
             android:text="Testo dettaglio"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            />
 
         <TextView
             android:id="@+id/testoDettaglioCarboidrati"
@@ -38,7 +39,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="20sp"
             android:text="Carboidrati"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            />
 
         <TextView
             android:id="@+id/testoDettaglioProteine"
@@ -47,7 +49,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="20sp"
             android:text="Proteine"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            />
 
         <TextView
             android:id="@+id/testoDettaglioGrassi"
@@ -56,7 +59,17 @@
             android:layout_gravity="center"
             android:layout_marginTop="20sp"
             android:text="Grassi"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            />
+
+        <Button
+            android:id="@+id/modifyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            />
 
     </LinearLayout>
 

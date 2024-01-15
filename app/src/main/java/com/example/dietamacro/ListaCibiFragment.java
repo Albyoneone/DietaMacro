@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -36,11 +37,23 @@ public class ListaCibiFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_lista_cibi, container, false);
 
+
         if(adapterNome.isEmpty()) {
             loadData(view);
         } else {
             setupAdapter(view);
         }
+
+        Button button = view.findViewById(R.id.aggiungiBottone);
+        button.setOnClickListener(view1 -> {
+
+            // Navigate to another fragment
+            AggiungiDatiFragment aggiungiDatiFragment = new AggiungiDatiFragment();
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame_layout, aggiungiDatiFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
 
         return view;
     }
@@ -76,7 +89,11 @@ public class ListaCibiFragment extends Fragment {
         lista.setOnItemClickListener((parent, view1, i, id) -> {
             DettaglioCiboFragment dettaglioFragment = new DettaglioCiboFragment();
             Bundle args = new Bundle();
-            args.putString("nome", adapterNome.get(i).getNome());
+
+            args.putString("titoloPrincipale", adapterNome.get(i).getNome());
+            args.putString("carboidrati", String.valueOf(adapterNome.get(i).getCarboidrati()));
+            args.putString("proteine", String.valueOf(adapterNome.get(i).getProteine()));
+            args.putString("grassi", String.valueOf(adapterNome.get(i).getGrassi()));
             dettaglioFragment.setArguments(args);
 
             requireActivity().getSupportFragmentManager().beginTransaction()
@@ -84,6 +101,8 @@ public class ListaCibiFragment extends Fragment {
                     .addToBackStack(null)
                     .commit();
         });
-    };
+    }
+
+
 
 }
