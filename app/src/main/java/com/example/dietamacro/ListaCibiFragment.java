@@ -96,7 +96,6 @@ public class ListaCibiFragment extends Fragment {
         Button button = view.findViewById(R.id.aggiungiBottone);
         button.setOnClickListener(view1 -> {
 
-            // Navigate to another fragment
             AggiungiDatiFragment aggiungiDatiFragment = new AggiungiDatiFragment();
             requireActivity().getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frame_layout, aggiungiDatiFragment)

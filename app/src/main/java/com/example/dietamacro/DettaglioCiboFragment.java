@@ -73,6 +73,8 @@ public class DettaglioCiboFragment extends Fragment {
             deleteData(nome5);
         });
 
+            modifyData(view, nome, nome2, nome3, nome4, nome5);
+
         return view;
     }
 
@@ -91,4 +93,24 @@ public class DettaglioCiboFragment extends Fragment {
                 });
     }
 
+    public void modifyData (View view, String a, String b, String c, String d, String e) {
+        Button buttonModyfy = view.findViewById(R.id.modifyButton);
+        buttonModyfy.setOnClickListener(view1 -> {
+
+            ModificaDatiFragment modificaDatiFragment = new ModificaDatiFragment();
+            Bundle args = new Bundle();
+            args.putString("titolo", a);
+            args.putString("carbo", b);
+            args.putString("proteine", c);
+            args.putString("grassi", d);
+            args.putString("id", e);
+            modificaDatiFragment.setArguments(args);
+
+
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame_layout, modificaDatiFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
+    }
 }
