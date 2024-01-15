@@ -37,23 +37,13 @@ public class ListaCibiFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_lista_cibi, container, false);
 
-
         if(adapterNome.isEmpty()) {
             loadData(view);
         } else {
             setupAdapter(view);
         }
 
-        Button button = view.findViewById(R.id.aggiungiBottone);
-        button.setOnClickListener(view1 -> {
-
-            // Navigate to another fragment
-            AggiungiDatiFragment aggiungiDatiFragment = new AggiungiDatiFragment();
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frame_layout, aggiungiDatiFragment)
-                    .addToBackStack(null)
-                    .commit();
-        });
+        aggiungiAlimento(view);
 
         return view;
     }
@@ -103,6 +93,16 @@ public class ListaCibiFragment extends Fragment {
         });
     }
 
+    public void aggiungiAlimento (View view) {
+        Button button = view.findViewById(R.id.aggiungiBottone);
+        button.setOnClickListener(view1 -> {
 
+            // Navigate to another fragment
+            AggiungiDatiFragment aggiungiDatiFragment = new AggiungiDatiFragment();
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame_layout, aggiungiDatiFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });    };
 
 }
