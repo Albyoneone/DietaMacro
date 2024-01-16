@@ -27,32 +27,105 @@
         android:hint="Testo dettaglio"
         android:textSize="40sp" />
 
-    <EditText
-        android:id="@+id/testoDettaglioCarboidrati"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:hint="Carboidrati"
-        android:inputType="number"
-        android:textSize="40sp" />
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
-    <EditText
-        android:id="@+id/testoDettaglioProteine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:hint="Proteine"
-        android:inputType="number"
-        android:textSize="40sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carboidrati"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            />
 
-    <EditText
-        android:id="@+id/testoDettaglioGrassi"
+        <EditText
+            android:id="@+id/testoDettaglioCarboidrati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Carboidrati"
+            android:inputType="number"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="g"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:hint="Grassi"
-        android:inputType="number"
-        android:textSize="40sp" />
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proteine"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            />
+
+        <EditText
+            android:id="@+id/testoDettaglioProteine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Proteine"
+            android:inputType="number"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="g"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proteine"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            />
+
+        <EditText
+            android:id="@+id/testoDettaglioGrassi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Grassi"
+            android:inputType="number"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="g"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/saveBottone"
